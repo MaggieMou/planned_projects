@@ -7,6 +7,7 @@ distortion and chorus.
 - STARVE: emulation of tube distortion with power-starvation dynamics artifacts.
 - MIKROSYN: minimalistic subtractive synthesizer with some unusual features (sine
 osc with phasor distortion, pitch follow sample rate reducer, low-pass gate).
+- PENDULUM: pendulum distortion =)
 - GRAINTABLE: somewhere between a wavetable synth and a granular synth. Grains are
 synthesized by picking a place on the wavetable.
 - FFT_SHIMMER: uses the FFT engine for diffusion (blurring) and for pitch shifting,
