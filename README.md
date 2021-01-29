@@ -5,8 +5,9 @@ Here is a list of upcoming plugins and applications. If you want to add things, 
 - VIBE_MACHINE: instant vaporwave-ifyer. Combination of a granular delay, pitch shifter,
 distortion and chorus.
 - STARVE: emulation of tube distortion with power-starvation dynamics artifacts.
-- MIKROSYN: minimalistic subtractive synthesizer with some unusual features (sine
-osc with phasor distortion, pitch follow sample rate reducer, low-pass gate).
+- MIKROSYN: minimalistic subtractive synthesizer with some unusual features (tri-saw
+core into sin shaper into tanh oscillator (can make all classic waveforms and more)
+mix with noise, into pitch-follow bit crush into LPG).
 - PENDULUM: pendulum distortion =)
 - GRAINTABLE: somewhere between a wavetable synth and a granular synth. Grains are
 synthesized by picking a place on the wavetable.
