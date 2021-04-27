@@ -26,7 +26,7 @@ start actually listening to what you are doing, this feature can be disabled if 
 are a boring person.
 
 
-## Coming Soon: <unnamed resonator> - Extend Karplus-Strong resonator
+## Coming Soon: \<unnamed resonator\> - Extend Karplus-Strong resonator
 ***Commissioned by Maldecoucou*** - ***Planning stage***
 
 Turn any sound into pads, with three parallel resonators, tunable into a chord.
