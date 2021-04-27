@@ -6,7 +6,7 @@ but which are not currently in development. The coming soon section is in order 
 is most likely to come out first.
 
 ## Coming Soon: VIBE_MACHINE (name might change) - instant vaporwave/plunderfonics-ifyer effect
-***This was commissioned by Synes*** - ***Almost complete!***
+***Commissioned by Synes*** - ***Almost complete!***
 
 VIBE_MACHINE is a badly behaved delay plugin, where the input is passed through three
 different delay lines, left, mid and right, each one is controlled by the same "length"
@@ -25,9 +25,41 @@ As a twist, every control has obscure names so that you stop thinking technicall
 start actually listening to what you are doing, this feature can be disabled if you
 are a boring person.
 
+
+## Coming Soon: <unnamed resonator> - Extend Karplus-Strong resonator
+***Commissioned by Maldecoucou*** - ***Planning stage***
+
+Turn any sound into pads, with three parallel resonators, tunable into a chord.
+Each resonator has separate level and tuning controls, whereas the other parameters
+are controlled by master controls.
+
+The extended karplus-strong resonator is used extensively in Mutable Instruments Eurorack
+modules, like Rings, Elements and Plaits. It can sound anywhere from a plucked string, to
+woodwinds, to bells. Additionally, in the feedback path of the resonator, I'm adding a
+diffuser, to make the harmonics more blurred and reverby.
+
+
 ## Coming Soon: BUFFER_FUCK - audio buffer corruption effect.
+***planning stage***
+The incoming audio is pushed into a buffer (a sort of digital equivalent to a piece of
+audio tape). Then various operations are performed on the buffer to mangle it:
+
+- Input to index-FM: the position of the read index in the buffer is modulated by the
+  input.
+- Output to index-FM: the position of the read index in the buffer is modulated by the
+  output of the plugin, this introduces a feedback dependency, which I expect will
+  sound cool.
+- Terrible pitch shifting: the read index is moved at a constant speed to produce a
+  very bad pitch shift effect.
+- Scrape flutter: the read index is moved around at random, producing heavy side-band
+  distortion.
+- Buffer freezing: the output is fed back into the input, crossfaded with the dry input,
+  so at 100% feedback, there is no new input being placed into the buffer, essentially
+  freezing it, getting more and more mangled.
+
 
 ## Coming Soon: MIKROSYN - lo-fi phase distortion monosynth
+***Commissioned by Bjarke*** - ***planning stage***
 MIKROSYN is in the planning phase, where is the plan? You are reading it right now.
 
 MIKROSYN is a phase distortion monosynth, i.e. there is a ramp oscillator at its core,
@@ -64,7 +96,22 @@ can be routed to the sine shaper instead, and the LPG is fixed at a set level. T
 makes the synth sound very Buchla-esque, especially when pushing the sine shaper.
 
 The oscillator section of this may or may not become a Eurorack module in the future.
- 
+
+
+## Coming Soon: GRAINTABLE (name might change) - Granular wavetable polysynth
+***Commissioned by Plebber*** - ***planning stage***
+
+GRAINTABLE is a cross between a granular synth and a wavetable synth. Essentially
+each grain is a tiny little synth instance, that plays a short note, with variable
+attack, sustain and release, and then ceases to exist. Each grain plays from a
+wavetable, the wavetable position can be set by a master control, then randomized
+for each individual grain, additionally each grain might scan the table at a separate
+speed and might have a randomized pitch.
+
+The wavetable selection is built-in because a fully-featured wavetable editor is way
+past my skill level. I'm thinking a minimalistic mix of utilitarian wavetables, arranged
+in an X-Y-Z single wavetable bank, so that they can be scanned tangentially.
+
 
 ## List of Planned Projects
 - VIBE_MACHINE: instant vaporwave-ifyer. Combination of a granular delay, pitch shifter,
