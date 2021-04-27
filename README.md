@@ -25,6 +25,28 @@ As a twist, every control has obscure names so that you stop thinking technicall
 start actually listening to what you are doing, this feature can be disabled if you
 are a boring person.
 
+## Coming Soon: SHITPRESSOR \ BUFFER_MAXIMIZER (havent decided yet) - naïve so bad it's good compressor
+Imagine you had half an hour to program a compressor, so intead of implementing it the traditional
+way, you do it in the most naïve possible way, taking every possible shortcut. This is what
+SHITPRESSOR \ BUFFER_MAXIMIZER does. It has three controls:
+- Buffer size: controls the size of an internal buffer, similar to the sustain control on some more
+  advanced compressors, like Image Line's Maximus, except shit.
+- Target: the level that the compressor tries to push the sound towards, not exactly like threshold
+  on a traditional compressor, but close.
+- Depth: how hard the sound is compressed
+
+The way it works is remarcably simple:
+- The input is fed into a buffer of variable length.
+- The peak loudness of the buffer is calculated at every step.
+- The volume of the output is scaled so that the buffer peaks at the selected target.
+- Depth is a percentage from 0 to 200%, at 100% percent, the buffer peaks at the target
+  loudness, less than that and the compressor only takes it partway there, more than that
+  and the compressor overshoots, making it shit.
+
+You might have noticed the absence of an attack and release control, this is because this
+compressor is terrible, and will introduce a lot of annoying clicks and pops to your sound
+and generally distort the hell out of it. Enjoy.
+
 
 ## Coming Soon: \<unnamed resonator\> - Extend Karplus-Strong resonator
 ***Commissioned by Maldecoucou*** - ***Planning stage***
@@ -39,7 +61,7 @@ woodwinds, to bells. Additionally, in the feedback path of the resonator, I'm ad
 diffuser, to make the harmonics more blurred and reverby.
 
 
-## Coming Soon: BUFFER_FUCK - audio buffer corruption effect.
+## Coming Soon: BUFFER_FUCK \ BUFFER_THRASHER- audio buffer corruption effect.
 ***planning stage***
 The incoming audio is pushed into a buffer (a sort of digital equivalent to a piece of
 audio tape). Then various operations are performed on the buffer to mangle it:
@@ -56,7 +78,6 @@ audio tape). Then various operations are performed on the buffer to mangle it:
 - Buffer freezing: the output is fed back into the input, crossfaded with the dry input,
   so at 100% feedback, there is no new input being placed into the buffer, essentially
   freezing it, getting more and more mangled.
-
 
 ## Coming Soon: MIKROSYN - lo-fi phase distortion monosynth
 ***Commissioned by Bjarke*** - ***planning stage***
@@ -97,6 +118,24 @@ makes the synth sound very Buchla-esque, especially when pushing the sine shaper
 
 The oscillator section of this may or may not become a Eurorack module in the future.
 
+## STOCHASTIC - Stochastic bitcrusher
+STOCHASTIC can both be a normal bitcrusher, and what I call a "stochastic quantizer".
+- A bitcrusher samples the incoming sound at a regular rate, lower rate than the host 
+  sample rate, producing heavy intentional aliasing distortion.
+- A stochastic quantizer, samples the input, and only samples it again based on probability,
+  the more the input differs from the sampled value, the higher the probability. This is
+  similar to how objects move when they are pushed lightly and they have to overcome friction,
+  moving at irregular steps once pressure accumulates enough to win the friction.
+In between these two effects is a space of in-between effects controller by three parameters:
+- Rate: how often the input is sampled per second.
+- Regularity: turns the effect from a probabilistic mode, where rate controls the probability
+  rather than the pure rate of the samples, to a deterministic rate, where the rate control
+  dictates precisely how often the input is sampled.
+- Input-dependence: goes from the samples being triggered invariantly of the level of the input,
+  to the samples being triggered when the difference between the held value and the input is large enough,
+  again, when the process is probabilistic, the difference is a probability, when it is deterministic,
+  the difference triggers a sample at a fixed threshold.
+
 
 ## Coming Soon: GRAINTABLE (name might change) - Granular wavetable polysynth
 ***Commissioned by Plebber*** - ***planning stage***
@@ -111,6 +150,20 @@ speed and might have a randomized pitch.
 The wavetable selection is built-in because a fully-featured wavetable editor is way
 past my skill level. I'm thinking a minimalistic mix of utilitarian wavetables, arranged
 in an X-Y-Z single wavetable bank, so that they can be scanned tangentially.
+
+## Coming Soon: CASSETTE - Lo-fi cassette emulation
+- Low quality input transformers
+- Low quality transistor amplifiers
+- Tape correction EQ (pre and post)
+- Various modes of noise reduction compression and EQ, based on dolby NR, and dbx. Also
+  emulates the mismatch of encoding and decoding noise reduction methods.
+- Tape saturation and hysteresis
+- Realistic hiss from electronic thermal noise and tape grain
+- Wow, flutter and scrape flutter
+
+## Coming Soon: DECK - Full analog mastering signal chain emulator.
+Currently in research phase, don't have a plan on the structure of the plugin yet, but it does
+involve tape modelling, and possibly tube modelling.
 
 
 ## List of Planned Projects
