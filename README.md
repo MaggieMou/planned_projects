@@ -1,6 +1,40 @@
 # Planned Projects
 Here is a list of upcoming plugins and applications. If you want to add things, please make a new issue.
 
+## Coming Soon: MIKROSYN - lo-fi phase distortion monosynth
+MIKROSYN is in the planning phase, where is the plan? You are reading it right now.
+
+MIKROSYN is a phase distortion monosynth, i.e. there is a ramp oscillator at its core,
+constantly outputting a *phase* that is then shaped to produce all the basic shapes:
+- Triangle shaper with asymmetry control: changes the slope of the rising and falling
+  edges so that it varies continuously between triangle and saw wave.
+- Pulse shaper with PWM control: turns the ramp into a pulse, the PWM has LFO control
+- Sine shaper: turns ramp into a sine, can be pushed past 100% to sound like a hard-synced 
+  sine wave.
+- Noise: crossfade between the oscillator and pink noise, to mix in a bit of dust.
+What makes this interesting is that I've broken it. Each shaper has now a continuous
+variable "amount" parameter, so you can get an in-between shape, between saw and 
+whatever shape that specific shaper is doing. Another way this is broken, is that
+all these shapers can be active at the same time, chained together, for interesting
+results. Even more interesting, is that the noise parameter is introduced before
+all the shaping, so it gets mangled and chewed up together with the phase.
+
+Additionnally, there is a "unison" amount knob, this duplicates the phase ramp into
+multiple detuned phase ramps, which are summed together *before* the shapers, making
+a lot of fun dissonant distortion.
+
+Finally, everything is encoded into 6-bit mu-law format, with limited sample rate. The
+sample rate can either be fixed, acting like a bit-crush, or it kan be keyboard tracking,
+meaning it can be tuned to created intervals.
+
+After this digital section, there is a gentle analog-ish low-pass-gate to tame some of
+the high end. The LPG is controlled by an AD / AR envelope. Alternatively, the envelope
+can be routed to the sine shaper instead, and the LPG is fixed at a set level. This
+makes the synth sound very Buchla-esque, especially when pushing the sine shaper.
+
+The oscillator section of this may or may not become a Eurorack module in the future.
+ 
+
 ## List of Planned Projects
 - VIBE_MACHINE: instant vaporwave-ifyer. Combination of a granular delay, pitch shifter,
 distortion and chorus.
