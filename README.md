@@ -1,5 +1,31 @@
 # Planned Projects
 Here is a list of upcoming plugins and applications. If you want to add things, please make a new issue.
+At the top of the list are the "coming soon" descriptions of plugins I am currently working on,
+below that is a brainstorm of plugin ideas that have been suggested or that I am curious to try,
+but which are not currently in development. The coming soon section is in order of which one
+is most likely to come out first.
+
+## Coming Soon: VIBE_MACHINE (name might change) - instant vaporwave/plunderfonics-ifyer effect
+***This was commissioned by Synes*** - ***Almost complete!***
+
+VIBE_MACHINE is a badly behaved delay plugin, where the input is passed through three
+different delay lines, left, mid and right, each one is controlled by the same "length"
+knob, but has a different irrational proportion of whatever the "length" knob shows, so
+that it is futile to try and sync it with the project's tempo. This is very intentional,
+as it makes it sound quite granular.
+
+Additionally, each delay line has a playback speed which can be chosen from a list of
+musical combinations, and which affects the pitch of each delay line, creating shimmer-like
+effects, and making any attempt of syncing with the project tempo even harder.
+
+Within the feedback path of each delay line are: a tape wow kind of vibrato, saturation
+and diffusion. This quickly turns the delay into more of a granular smear of harmonics.
+
+As a twist, every control has obscure names so that you stop thinking technically and
+start actually listening to what you are doing, this feature can be disabled if you
+are a boring person.
+
+## Coming Soon: BUFFER_FUCK - audio buffer corruption effect.
 
 ## Coming Soon: MIKROSYN - lo-fi phase distortion monosynth
 MIKROSYN is in the planning phase, where is the plan? You are reading it right now.
@@ -12,7 +38,11 @@ constantly outputting a *phase* that is then shaped to produce all the basic sha
 - Sine shaper: turns ramp into a sine, can be pushed past 100% to sound like a hard-synced 
   sine wave.
 - Noise: crossfade between the oscillator and pink noise, to mix in a bit of dust.
-What makes this interesting is that I've broken it. Each shaper has now a continuous
+So far, if we were to take each shaper in parallel, we would have the classic design
+of an analog multimode oscillator, albeit a bit more buchla style than what the plugin
+world is used to; however what makes this interesting is that I've broken it. 
+
+Each shaper has now a continuous
 variable "amount" parameter, so you can get an in-between shape, between saw and 
 whatever shape that specific shaper is doing. Another way this is broken, is that
 all these shapers can be active at the same time, chained together, for interesting
@@ -25,7 +55,8 @@ a lot of fun dissonant distortion.
 
 Finally, everything is encoded into 6-bit mu-law format, with limited sample rate. The
 sample rate can either be fixed, acting like a bit-crush, or it kan be keyboard tracking,
-meaning it can be tuned to created intervals.
+meaning it can be tuned to created intervals. The 6-bit encoding is heavily lo-fi and
+can be turned off if unwanted.
 
 After this digital section, there is a gentle analog-ish low-pass-gate to tame some of
 the high end. The LPG is controlled by an AD / AR envelope. Alternatively, the envelope
