@@ -60,6 +60,9 @@ modules, like Rings, Elements and Plaits. It can sound anywhere from a plucked s
 woodwinds, to bells. Additionally, in the feedback path of the resonator, I'm adding a
 diffuser, to make the harmonics more blurred and reverby.
 
+## Coming Soon: <untitled mid-side panner>
+***Requested by Bjarke and myself***
+
 
 ## Coming Soon: BUFFER_FUCK \ BUFFER_THRASHER- audio buffer corruption effect.
 ***planning stage***
