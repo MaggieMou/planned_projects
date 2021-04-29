@@ -167,6 +167,7 @@ involve tape modelling, and possibly tube modelling.
 
 
 ## List of Planned Projects
+- \<untitled beat-repeat thing\>: makes your boring beat less boring. Suggested by Bjarke. 
 - VIBE_MACHINE: instant vaporwave-ifyer. Combination of a granular delay, pitch shifter,
 distortion and chorus.
 - STARVE: emulation of tube distortion with power-starvation dynamics artifacts.
