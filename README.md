@@ -169,17 +169,18 @@ Currently in research phase, don't have a plan on the structure of the plugin ye
 involve tape modelling, and possibly tube modelling.
 
 
-## List of Planned Projects
+# Suggestions and Ideas Backlog
+
+These may never see the light of day. For plugins being actively worked on, see the list above instead.
+- GROOVER: tempo-synced delay network. Has six delay times: 1, 2, 3, 5, 7, 11 steps. Each delay time
+  is used on a separate delay line. The six delay lines can be in parallel or in series, the parallel
+  or series connection can be varied continuously, so that with in-between values, the delay network
+  can be quite complex. There is feedback control, which is six separate feedback paths for each
+  delay when in parallel, and one global feedback for the entire chain when in series. The time can be
+  multiplied or divided by integer amounts with a macro control.
 - \<untitled beat-repeat thing\>: makes your boring beat less boring. Suggested by Bjarke. 
-- VIBE_MACHINE: instant vaporwave-ifyer. Combination of a granular delay, pitch shifter,
-distortion and chorus.
 - STARVE: emulation of tube distortion with power-starvation dynamics artifacts.
-- MIKROSYN: minimalistic subtractive synthesizer with some unusual features (tri-saw
-core into sin shaper into tanh oscillator (can make all classic waveforms and more)
-mix with noise, into pitch-follow bit crush into LPG).
 - PENDULUM: pendulum distortion =)
-- GRAINTABLE: somewhere between a wavetable synth and a granular synth. Grains are
-synthesized by picking a place on the wavetable.
 - FFT_SHIMMER: uses the FFT engine for diffusion (blurring) and for pitch shifting,
 has an added delay network in the feedback path, as well as a traditional time-domain
 vibrato-like effect for a more chorus-y sound.
