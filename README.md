@@ -47,21 +47,14 @@ You might have noticed the absence of an attack and release control, this is bec
 compressor is terrible, and will introduce a lot of annoying clicks and pops to your sound
 and generally distort the hell out of it. Enjoy.
 
+## Coming Soon: POWER_OF_THE_BATHROOM - Room reverb and distortion, can self-oscillate
+A simple room reverb, with a twist: there's distortion in the feedback path.
+Drive it to create electric guitar-esque overdrive and cab like sounds. There is
+some inaudible white noise added to the input, so that when the feedback is above
+unity gain, it goes into self-oscillation, producing harsh metallic drones.
 
-## Coming Soon: \<unnamed resonator\> - Extend Karplus-Strong resonator
-***Commissioned by Maldecoucou*** - ***Planning stage***
-
-Turn any sound into pads, with three parallel resonators, tunable into a chord.
-Each resonator has separate level and tuning controls, whereas the other parameters
-are controlled by master controls.
-
-The extended karplus-strong resonator is used extensively in Mutable Instruments Eurorack
-modules, like Rings, Elements and Plaits. It can sound anywhere from a plucked string, to
-woodwinds, to bells. Additionally, in the feedback path of the resonator, I'm adding a
-diffuser, to make the harmonics more blurred and reverby.
-
-## Coming Soon: <untitled mid-side panner>
-***Requested by Bjarke and myself***
+The name comes from the fact that it sounds like a bathroom reverb, and that it also
+makes for some good power electronics / harsh noise.
 
 
 ## Coming Soon: BUFFER_FUCK \ BUFFER_THRASHER- audio buffer corruption effect.
@@ -167,6 +160,21 @@ in an X-Y-Z single wavetable bank, so that they can be scanned tangentially.
 ## Coming Soon: DECK - Full analog mastering signal chain emulator.
 Currently in research phase, don't have a plan on the structure of the plugin yet, but it does
 involve tape modelling, and possibly tube modelling.
+
+## Coming Soon: \<unnamed resonator\> - Extend Karplus-Strong resonator
+***Commissioned by Maldecoucou*** - ***Planning stage***
+
+Turn any sound into pads, with three parallel resonators, tunable into a chord.
+Each resonator has separate level and tuning controls, whereas the other parameters
+are controlled by master controls.
+
+The extended karplus-strong resonator is used extensively in Mutable Instruments Eurorack
+modules, like Rings, Elements and Plaits. It can sound anywhere from a plucked string, to
+woodwinds, to bells. Additionally, in the feedback path of the resonator, I'm adding a
+diffuser, to make the harmonics more blurred and reverby.
+
+## Coming Soon: <untitled mid-side panner>
+***Requested by Bjarke and myself***
 
 
 # Suggestions and Ideas Backlog
