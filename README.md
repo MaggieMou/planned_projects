@@ -25,27 +25,32 @@ As a twist, every control has obscure names so that you stop thinking technicall
 start actually listening to what you are doing, this feature can be disabled if you
 are a boring person.
 
-## Coming Soon: SHITPRESSOR \ BUFFER_MAXIMIZER (havent decided yet) - naïve so bad it's good compressor
-Imagine you had half an hour to program a compressor, so intead of implementing it the traditional
-way, you do it in the most naïve possible way, taking every possible shortcut. This is what
-SHITPRESSOR \ BUFFER_MAXIMIZER does. It has three controls:
-- Buffer size: controls the size of an internal buffer, similar to the sustain control on some more
-  advanced compressors, like Image Line's Maximus, except shit.
-- Target: the level that the compressor tries to push the sound towards, not exactly like threshold
-  on a traditional compressor, but close.
-- Depth: how hard the sound is compressed
+## Coming Soon: NON_LINEAR_FILTERS - bunch of non-linear filters for testing purposes
+This is another "meta-plugin" like HYSERESIS. Not really a finished product, but a 
+showcase of some of the technology that I am developing for the purpose of building
+larger plugins in the future.
 
-The way it works is remarcably simple:
-- The input is fed into a buffer of variable length.
-- The peak loudness of the buffer is calculated at every step.
-- The volume of the output is scaled so that the buffer peaks at the selected target.
-- Depth is a percentage from 0 to 200%, at 100% percent, the buffer peaks at the target
-  loudness, less than that and the compressor only takes it partway there, more than that
-  and the compressor overshoots, making it shit.
+Non-linear filters have interesting properties that make them less usable for 
+technical applications, but more fun for creative applications. They don't have the
+same frequency response for all levels of input loudness and/or they distort the
+signal, adding harmonics additively.
 
-You might have noticed the absence of an attack and release control, this is because this
-compressor is terrible, and will introduce a lot of annoying clicks and pops to your sound
-and generally distort the hell out of it. Enjoy.
+This one is very simple, it has three knobs: mode, lp/hp mix, cutoff
+- mode selects the type of filter, these are not necessarily related to each other
+  - 2-pole Airwindows Capacitor2-esque filter
+  - 4-pole ariwindows filter
+  - soft first order slew clipper (formerly "erase" knob on hysteresis)
+  - soft second order slew clipper
+  - hard first order slew clipper
+  - hard second order slew clipper
+  - first order median filter
+  - second order median filter
+  - logarithmic 2-pole biquad: takes the log of the signal, filters it, then takes the exponential
+  - logarithmic 4-pole biquad
+- lp/hp mix: crossfades between lowpass mode and highpass mode, in between there is something like a notch or similar
+- cutoff: approximate cutoff of the filter, this cannot possibly be precise because non-linear filters have different
+  frequency responses at different levels of the input
+
 
 ## Coming Soon: POWER_OF_THE_BATHROOM - Room reverb and distortion, can self-oscillate
 A simple room reverb, with a twist: there's distortion in the feedback path.
@@ -173,8 +178,30 @@ modules, like Rings, Elements and Plaits. It can sound anywhere from a plucked s
 woodwinds, to bells. Additionally, in the feedback path of the resonator, I'm adding a
 diffuser, to make the harmonics more blurred and reverby.
 
-## Coming Soon: <untitled mid-side panner>
+## Coming Soon: \<untitled side exciter\>
 ***Requested by Bjarke and myself***
+  
+## Coming Soon: SHITPRESSOR \ BUFFER_MAXIMIZER (havent decided yet) - naïve so bad it's good compressor
+Imagine you had half an hour to program a compressor, so intead of implementing it the traditional
+way, you do it in the most naïve possible way, taking every possible shortcut. This is what
+SHITPRESSOR \ BUFFER_MAXIMIZER does. It has three controls:
+- Buffer size: controls the size of an internal buffer, similar to the sustain control on some more
+  advanced compressors, like Image Line's Maximus, except shit.
+- Target: the level that the compressor tries to push the sound towards, not exactly like threshold
+  on a traditional compressor, but close.
+- Depth: how hard the sound is compressed
+
+The way it works is remarcably simple:
+- The input is fed into a buffer of variable length.
+- The peak loudness of the buffer is calculated at every step.
+- The volume of the output is scaled so that the buffer peaks at the selected target.
+- Depth is a percentage from 0 to 200%, at 100% percent, the buffer peaks at the target
+  loudness, less than that and the compressor only takes it partway there, more than that
+  and the compressor overshoots, making it shit.
+  
+You might have noticed the absence of an attack and release control, this is because this
+compressor is terrible, and will introduce a lot of annoying clicks and pops to your sound
+and generally distort the hell out of it. Enjoy.
 
 
 # Suggestions and Ideas Backlog
