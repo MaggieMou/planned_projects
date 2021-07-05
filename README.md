@@ -25,7 +25,7 @@ As a twist, every control has obscure names so that you stop thinking technicall
 start actually listening to what you are doing, this feature can be disabled if you
 are a boring person.
 
-## Coming Soon: NON_LINEAR_FILTERS - bunch of non-linear filters for testing purposes
+## ~~Coming Soon: NON_LINEAR_FILTERS - bunch of non-linear filters for testing purposes~~ CANCELLED: other similar products will replace it
 This is another "meta-plugin" like HYSERESIS. Not really a finished product, but a 
 showcase of some of the technology that I am developing for the purpose of building
 larger plugins in the future.
