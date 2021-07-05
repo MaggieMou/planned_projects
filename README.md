@@ -20,12 +20,13 @@ market, as such, the idea is to be as experimental as possible within this domai
 are very creative, noisy and glitchy.
 
 1. Experimental stage (fucking around)
-   * [x] GLITCH_DIV
+   * [x] GLITCH_DIV ***needs updating to include pitching up***
    * [ ] VIBE_MACHINE ***in progress***
    * [ ] BUFFER_THRASHER (feedback self-FM)
-   * [ ] POWER_OF_THE_BATHROOM (non-linear distorting reverb) ***in progress***
+   * [ ] POWER_OF_THE_BATHROOM (non-linear saturating room-reverb) ***in progress***
    * [ ] SHITPRESSOR (compressor but terrible)  
    * [ ] STOCHASTIC (stochastic bitcrusher)
+   * [ ] GROOVER (polymetric tempo-synched delay bank)
 2. Commercial products
    * [ ] STEREO_TOOLS (mid-side utilities, stereo exchiter, stereo widener)
    * [ ] BUS_CONDITIONER (master bus utilities)
@@ -73,19 +74,22 @@ It sounds remarkably digital, as it is a purely abstract mathematical approach, 
 very out-there and is worth exploring, as there hasn't been a lot of research into creative uses for FFT yet.
 
 1. Experimental Stage (fucking around)
-  * [x] FFT_FREEZE
-  * [ ] FFT_FUCK (mangling, lo-fi glitch)
-  * [ ] FFT_SMEAR (frequency averaging)
-  * [ ] FFT_SHIFT (pitch shifting, frequency shifting)
-  * [ ] others to come
+   * [x] FFT_FREEZE
+   * [ ] FFT_FUCK (mangling, lo-fi glitch)
+   * [ ] FFT_SMEAR (frequency averaging)
+   * [ ] FFT_SHIFT (pitch shifting, frequency shifting)
+   * [ ] FFT_PHASER (hackable frequency domain phaser)
+   * [ ] others to come
 2. Develop top-level FFT-based plugins
-  * [ ] SUPERGLUE (spectral compander and dynamic EQ)
-  * [ ] others to come
+   * [ ] SUPERGLUE (spectral compander and dynamic EQ)
+   * [ ] others to come
 
 ## Synthesizers
 Making synthesizers involves overcoming the massive development burden of managing MIDI voice allocation.
 
 1. Concept stage
+   * [ ] KICKER (kick synthesis that maximizes plastic and rubber aesthetics)
+   * [ ] SCOLECITE (percussion synthesis based on SØS-style noise percussion)
    * [ ] MIKROSYN (phase-distortion synthesizer)
    * [ ] GRAIN_TABLE (wavetable granular synth, wavetables are based on phase distortion, so MIKROSYN needs to be developed first)
    * [ ] others to come
