@@ -27,6 +27,7 @@ are very creative, noisy and glitchy.
    * [ ] SHITPRESSOR (compressor but terrible)  
    * [ ] STOCHASTIC (stochastic bitcrusher)
    * [ ] GROOVER (polymetric tempo-synched delay bank)
+   * [ ] CHEBYCHEV (chebychev polynomial distortion)
 2. Commercial products
    * [ ] STEREO_TOOLS (mid-side utilities, stereo exchiter, stereo widener)
    * [ ] BUS_CONDITIONER (master bus utilities)
