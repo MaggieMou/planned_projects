@@ -1,3 +1,97 @@
+# Flux-Audio Roadmap
+There are several branches of plugins I inted working on, for each branch a series of "meta-plugins" i.e. experimental testing plugins
+is developed first. These are subject to change and might get discontinued without prior notice.
+
+The overall roadmap is the following
+1. Develop meta-plugins for each branch (open source)
+2. Develop prototype top-level commercial plugins (open source)
+3. Refine top-level commercial plugins by homogenizing development process (open source)
+   1. Develop shared DSP library (DSP_LAB)
+   2. Develop Rust-based VST framework (VST_LAB)
+   3. Develop UI methodologies
+4. Develop the UI and monetize plugins (closed source)
+5. Develop a commercial business strategy
+6. Develop guitar pedals and eurorack modules based on the most succesful plugins, using STM Cortex ARM microprocessor.
+7. Develop a hackable DAW based on the concept of modularity, and accessible audio scripting.
+
+## Buffer-Based and Other Time-Domain Digital Effects
+Buffer based effects encompass al the traditional audio effects like chorus, reverb, delay, ... and is the most saturated
+market, as such, the idea is to be as experimental as possible within this domain, to stand out. Most of these effects
+are very creative, noisy and glitchy.
+
+1. Experimental stage (fucking around)
+   * [x] GLITCH_DIV
+   * [ ] VIBE_MACHINE ***in progress***
+   * [ ] BUFFER_THRASHER (feedback self-FM)
+   * [ ] POWER_OF_THE_BATHROOM (non-linear distorting reverb) ***in progress***
+   * [ ] SHITPRESSOR (compressor but terrible)  
+   * [ ] STOCHASTIC (stochastic bitcrusher)
+ 2. Commercial products
+   * [ ] STEREO_TOOLS (mid-side utilities, stereo exchiter, stereo widener)
+   * [ ] BUS_CONDITIONER (master bus utilities)
+   * [ ] CHANNEL_CONDITIONER (channel utilities)
+
+## Chaos-based Synthesis
+Chaos is a big interest of mine, and it's something I'd love to explore in the form of plugins and possibly analog cirucits at some point.
+This is not really a commercial plan, but more of a list of fun experiments for me.
+
+* [x] CHAOS_OSC_1 ***needs to be re-made***
+* [ ] CHAOS_OSC_ALPHA (chaos osc 1, re-made, Based on saturating double pendulums)
+* [ ] CHAOS_OSC_BETA (chaotic osccillator based on three-body orbits)
+* [ ] CHAOS_OSC_GAMMA (chaotic oscillator based on fractal chaotic maps, like mandelbrot)
+* [ ] others to come
+
+## Virtual Analog Effects
+Virtual analog means emulating real electrical circuits within a digital domain. For this first generation of plugins the idea is to
+create ad-hoc models for each sub-component. A sub-component could be a filtering circuit, an amplification stage, an audio transformer
+and so on.
+
+The long term goal would be to develop a modular framework, perhaps based on WDF. Faust has a good library for writing WDF models.
+
+1. Develop all independent meta-plugins
+   * [x] HYSTERESIS
+   * [ ] REAL_FILTER ***in progress***
+   * [ ] SLEW ***in progress***
+   * [ ] SOLID (solid state amp modelling, i.e. opamp, OTA, FET, BJT)
+   * [ ] TUBE
+   * [ ] REAL_EQ
+   * [ ] ARTIFACT (tape warble, crackle and noise modelling)
+2. Develop top-level analog modelling plugins
+   * [ ] MAGIC (instant analog mojo 4 knob plugin)
+   * [ ] DECK (tube tape deck modelling, based on Burstein book)
+   * [ ] CASSETTE (lo-fi cassette tape modelling)
+   * [ ] CHANNEL (modelling of solid state analog console channel, with opto-compressor)
+   * [ ] BUS (modelling of solid state master bus channel with glue compressor)
+
+## FFT-based Effects
+FFT is a technique for transforming time-domain signals into a frequency-domain signal. Once the sound is in the frequency domain,
+it can be processed using completely different techniques than in the time-domain, then converted back into time-domain afterwards.
+This technique is beginning to gain a lot of traction, software like Izotope RX, Izotope Ozone, various AI-based automatic EQs,
+SpecOps, ...
+
+It sounds remarkably digital, as it is a purely abstract mathematical approach, that has no real counterpart. It can sound
+very out-there and is worth exploring, as there hasn't been a lot of research into creative uses for FFT yet.
+
+1. Experimental Stage (fucking around)
+  * [x] FFT_FREEZE
+  * [ ] FFT_FUCK (mangling, lo-fi glitch)
+  * [ ] FFT_SMEAR (frequency averaging)
+  * [ ] FFT_SHIFT (pitch shifting, frequency shifting)
+  * [ ] others to come
+2. Develop top-level FFT-based plugins
+  * [ ] SUPERGLUE (spectral compander and dynamic EQ)
+  * [ ] others to come
+
+## Synthesizers
+Making synthesizers involves overcoming the massive development burden of managing MIDI voice allocation.
+
+1. Concept stage
+   * [ ] MIKROSYN (phase-distortion synthesizer)
+   * [ ] GRAIN_TABLE (wavetable granular synth, wavetables are based on phase distortion, so MIKROSYN needs to be developed first)
+   * [ ] others to come
+2. Product stage (closed source)
+   * [ ] GRAIN_TABLE (but with UI and a wavetable editor)
+
 # Planned Projects
 Here is a list of upcoming plugins and applications. If you want to add things, please make a new issue.
 At the top of the list are the "coming soon" descriptions of plugins I am currently working on,
@@ -202,7 +296,6 @@ The way it works is remarcably simple:
 You might have noticed the absence of an attack and release control, this is because this
 compressor is terrible, and will introduce a lot of annoying clicks and pops to your sound
 and generally distort the hell out of it. Enjoy.
-
 
 # Suggestions and Ideas Backlog
 
