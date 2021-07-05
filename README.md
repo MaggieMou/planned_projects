@@ -26,7 +26,7 @@ are very creative, noisy and glitchy.
    * [ ] POWER_OF_THE_BATHROOM (non-linear distorting reverb) ***in progress***
    * [ ] SHITPRESSOR (compressor but terrible)  
    * [ ] STOCHASTIC (stochastic bitcrusher)
- 2. Commercial products
+2. Commercial products
    * [ ] STEREO_TOOLS (mid-side utilities, stereo exchiter, stereo widener)
    * [ ] BUS_CONDITIONER (master bus utilities)
    * [ ] CHANNEL_CONDITIONER (channel utilities)
